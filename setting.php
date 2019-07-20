@@ -20,5 +20,20 @@ spl_autoload_register(function($class) {
 });
 
 //initialize classes
+$cssList = [
+    '/res/lib/bootstrap-4.0.0/dist/css/bootstrap.min.css',
+    '/res/css/timeline.min.css',
+    '/res/css/styles.css'
+];
 
-$Outline = new Container();
+$jsList =[
+    '/res/js/jquery-3.2.1.slim.js',
+    '/res/js/timeline.min.js'
+
+];
+
+
+$Outline = new Layout('Kasaysayan.org');
+$Outline->addCss($cssList);
+$Outline->addJS($jsList);
+$Outline->setLogo('/res/images/logo.png');
